@@ -34,8 +34,16 @@ if((product1<=0) or (product2<=0) or (product3<=0) or (product4<=0) or (product5
 else: 
     totalAmount = amountforp1+amountforp2+amountforp3+amountforp4+amountforp5
     entries = {product1:100, product2:200, product3:300, product4:400, product5:500}
-    entries1 = {product1:amountforp1, product2:amountforp2, product3:amountforp3, product4:amountforp4, product4:amountforp5}
+    entries1 = {product1:amountforp1, product2:amountforp2, product3:amountforp3, product4:amountforp4, product5:amountforp5}
+    
+    #Creating ProductsData.txt and appending all user data in that file
+    x = open("ProductsData.txt", "a")
+    print("Price of products : ",entries,"\n","Total price of each product : ",entries1, file=x)
+    # file.close()
     for k,v in entries.items():
-        print(k, v)
-    print(entries1)
+        print(k, v, sep=":", end=" ")
+        print(k,v, file=x)
+
+    print("\n",entries1)
     print("The total amout should be paid by the user is: ", totalAmount)
+    print("The total amout should be paid by the user is: ", totalAmount, file=x)

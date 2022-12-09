@@ -1,0 +1,73 @@
+The Amount Of All Products
+The Amount Of All Products
+55000
+{10: 1000, 20: 4000, 30: 9000, 40: 16000, 50: 25000} 
+{10: 100, 20: 200, 30: 300, 40: 400, 50: 500} 
+55000
+
+{10: 1000, 20: 4000, 30: 9000, 40: 16000, 50: 25000} 
+ {10: 100, 20: 200, 30: 300, 40: 400, 50: 500} 
+ 55000
+
+
+{10: 1000, 20: 4000, 30: 9000, 40: 16000, 50: 25000} 
+ {10: 100, 20: 200, 30: 300, 40: 400, 50: 500} 
+
+10 100
+20 200
+30 300
+40 400
+50 500
+The total amout should be paid by the user is:  55000
+
+{20: 2000, 50: 10000, 60: 18000, 90: 36000, 70: 35000} 
+ {20: 100, 50: 200, 60: 300, 90: 400, 70: 500} 
+
+20 100
+50 200
+60 300
+90 400
+70 500
+The total amout should be paid by the user is:  101000
+Price of products :  {15: 100, 62: 200, 78: 300, 65: 400, 88: 500} 
+ Total price of each product :  {15: 1500, 62: 12400, 78: 23400, 65: 26000, 88: 44000} 
+
+15 100
+62 200
+78 300
+65 400
+88 500
+The total amout should be paid by the user is:  107300
+Price of products :  {15: 100, 65: 200, 85: 300, 55: 400, 12: 500} 
+ Total price of each product :  {15: 1500, 65: 13000, 85: 25500, 55: 22000, 12: 6000} 
+
+15 100
+65 200
+85 300
+55 400
+12 500
+
+The total amout should be paid by the user is:  68000
+Price of products :  {15: 100, 68: 200, 789: 300, 5: 400, 95: 500} 
+ Total price of each product :  {15: 1500, 68: 13600, 789: 236700, 5: 2000, 95: 47500}
+15 100
+68 200
+789 300
+5 400
+95 500
+The total amout should be paid by the user is:  301300
+Price of products :  {5: 100, 99: 200, 89: 300, 98: 400, 96: 500} 
+ Total price of each product :  {5: 500, 99: 19800, 89: 26700, 98: 39200, 96: 48000}
+5 100
+99 200
+89 300
+98 400
+96 500
+The total amout should be paid by the user is:  134200
+Price of products :  {45: 300, 56: 200, 52: 400, 68: 500} 
+ Total price of each product :  {45: 13500, 56: 11200, 52: 20800, 68: 34000}
+45 300
+56 200
+52 400
+68 500
+The total amout should be paid by the user is:  84000
