@@ -21,14 +21,14 @@ for val in dic1:
     print(dic1[val]) # It will only shows the values
 
 #taking inputs for using for loop
-'''College = {}
+College = {}
 for i in range(3):
     name = input("Enter name: ")
     rollnumber = input("Enter Roll Number: ")
     College[name] = rollnumber
-print(College)'''
+print(College)
 
 #Getting input from user and print it in a dictionary formate
-name = input("Enter name: ")
-rollnum = input("Enter Roll Number: ")
-print({name:rollnum})
+# name = input("Enter name: ")
+# rollnum = input("Enter Roll Number: ")
+# print({name:rollnum})

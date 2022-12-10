@@ -1,0 +1,6 @@
+INPUT:  Enter The Number To Even Or Odd:  658468664
+OUTPUT :  658468664 The Given Number Is Even Number 
+
+INPUT:  Enter The Number To Even Or Odd:  5168
+OUTPUT :  5168 The Given Number Is Even Number 
+

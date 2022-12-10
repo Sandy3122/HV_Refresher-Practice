@@ -43,7 +43,7 @@ else:
     for k,v in entries.items():
         print(k, v, sep=":", end=" ")
         print(k,v, file=x)
-
     print("\n",entries1)
+    
     print("The total amout should be paid by the user is: ", totalAmount)
     print("The total amout should be paid by the user is: ", totalAmount, file=x)
