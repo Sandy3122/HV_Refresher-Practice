@@ -18,7 +18,7 @@ if((num1<=0) or (num2<=0) or (num3<=0) or (num4<=0) or (num5<=0)):  # Checking w
 else:
     print("Sum Of All Numbers Is : ",total)                         # Printing the sum of all the values
     print("User Inputs: ", allInputs, file=data)                    # Saving all the input values in the list
-    print("Sum Of All Positive Numbers: ",total,"\n", file=data)         # Saving the total value in the file
+    print("Sum Of All Positive Numbers: ",total,"\n", file=data)    # Saving the total value in the file
 
 
 ''' *** Case2 *** '''
@@ -29,11 +29,11 @@ for i in range(num):                        # Iterating till the range
     n = int(input("Enter A Number: "))      # Number of elements as input
     if(n<=0):
         print("Note: Please Enter Only Positive Numbers")
-        break                               # If Condition is flase it will break the loop
+        # break                             # If Condition is flase it will break the loop
     else:
         userInputs.append(n)                # Adding all the positive numbers in list
         total+=n                            # Adding All Positive Numbers
 print("User Inputs: ", userInputs)
 print("User Inputs: ", userInputs, file=data)
 print("Sum Of All Positive Numbers: ",total)          
-print("Sum Of All Positive Numbers: ",total,"\n", file=data)'''          
+print("Sum Of All Positive Numbers: ",total,"\n", file=data)'''       

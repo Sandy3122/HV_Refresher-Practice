@@ -6,4 +6,6 @@ User Car Details:  {'Audi': 'Black', 'Range Rover': 'White'}
 
 User Car Details:  {'Kia': 'Black', 'Ferari': 'Red'} 
  
+User Car Details:  {'Skoda': 'Red', 'Toyota': 'White'} 
+ 
 
