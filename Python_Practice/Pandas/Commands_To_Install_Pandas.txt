@@ -1,0 +1,12 @@
+## To Install ##
+python -m pip install pandas
+
+
+## To Check Pands Version ###
+import pandas as pd
+
+# Get pandas Version
+print(pd.__version__)
+
+## To Check Installed Packages ##
+pip list
