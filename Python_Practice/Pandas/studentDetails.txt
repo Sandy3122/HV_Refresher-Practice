@@ -1,0 +1,16 @@
+Student Details With Names And Marks : 
+Sandeep     100
+Taruni      120
+Geethika    140
+Spandu      160
+Hyndu       180
+dtype: int64
+
+Student Details With Names And Marks : 
+kfjs    68
+svs     84
+sdvs    95
+svs     95
+sv      92
+dtype: int64 
+

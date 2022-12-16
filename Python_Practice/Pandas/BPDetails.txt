@@ -1,0 +1,26 @@
+Patient BP Details With Respective Days : 
+Day1    400
+Day2    450
+Day3    550
+Day4    500
+Day5    600
+dtype: int64
+
+Patient BP Details With Respective Days : 
+Monday     400
+Tuesday    450
+dtype: int64
+
+Patient BP Details With Respective Days : 
+Wednesday    500
+Thrusday     550
+dtype: int64
+
+Patient BP Details With Respective Days : 
+Monday       400
+Tuesday      450
+Wednesday    550
+Friday       550
+dtype: int64
+
+
