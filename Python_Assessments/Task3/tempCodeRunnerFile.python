@@ -1,0 +1,2 @@
+result = pd.Series(sqr, index=[num])
+# print(f"Square Of All The Inputs : \n{result}")

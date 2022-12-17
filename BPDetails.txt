@@ -1,0 +1,8 @@
+Patient BP Details With Respective Days : 
+kjb     65
+66      58
+nmi     68
+654    968
+dtype: int64
+
+
