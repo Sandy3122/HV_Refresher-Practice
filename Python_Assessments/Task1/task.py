@@ -36,4 +36,21 @@ for i in range(num):                        # Iterating till the range
 print("User Inputs: ", userInputs)
 print("User Inputs: ", userInputs, file=data)
 print("Sum Of All Positive Numbers: ",total)          
-print("Sum Of All Positive Numbers: ",total,"\n", file=data)'''       
+print("Sum Of All Positive Numbers: ",total,"\n", file=data)'''
+
+
+''' *** Case2 *** '''
+n = int(input("Number of inputs : "))
+ls = []
+for i in range(n):
+    while True:
+        m = int(input("Enter a number :"))
+        if m >= 0:
+            ls.append(m)
+            break
+        else:
+            print("Postive numbers only!")
+summ = sum(ls)
+data = open("task1userdata.txt", "a") 
+print("Given inputs are : ", ls, file=data)
+print("Sum of the inputs = ", summ, file = data)

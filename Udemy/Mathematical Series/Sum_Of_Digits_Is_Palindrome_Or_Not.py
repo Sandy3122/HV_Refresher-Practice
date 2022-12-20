@@ -17,6 +17,10 @@ Ex : 1 569
 21 != 12
 
 '''
+############
+## Case_1 ##
+############
+
 def isPalindrome(N): 
     newNum = 0
     while(N > 0): 
@@ -28,6 +32,16 @@ def isPalindrome(N):
         revNewNum = revNewNum * 10 + N % 10
         N = N // 10
     return 1 if(revNewNum == newNum) else 0
-
 N = int(input("Enter A Number : "))
 print(isPalindrome(N))
+
+
+
+############
+## Case_2 ##
+############
+
+num = int(input("Enter A Number : "))
+lst = [int(i) for i in range(num)]
+
+
