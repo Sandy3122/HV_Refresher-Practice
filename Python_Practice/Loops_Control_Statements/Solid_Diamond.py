@@ -51,20 +51,20 @@ i = 2 =>    4-2-1 = 3
 
 '''
 
-# N = int(input("Enter A Number : "))
-# # 1st half Pyramind
-# for i in range(N):
-#     print(" " * (N-i-1) + "* " * (i+1))
+N = int(input("Enter A Number : "))
+# 1st half Pyramind
+for i in range(N):
+    print(" " * (N-i-1) + "* " * (i+1))
 
-# # 2nd half Pyramind
-# for i in range(N-1):
-#     print(" " * (i+1) + "* " * (N-i-1))
+# 2nd half Pyramind
+for i in range(N-1):
+    print(" " * (i+1) + "* " * (N-i-1))
 
 
-n = int(input())
-k = n-1
-for i in range(1, n+1):
-    spaces = " " * k
-    stars = "* " * i
-    print(spaces+stars)
-    k = k - 1
+# n = int(input())
+# k = n-1
+# for i in range(1, n+1):
+#     spaces = " " * k
+#     stars = "* " * i
+#     print(spaces+stars)
+#     k = k - 1
