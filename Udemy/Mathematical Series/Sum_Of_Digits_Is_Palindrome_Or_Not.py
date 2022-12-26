@@ -21,19 +21,19 @@ Ex : 1 569
 ## Case_1 ##
 ############
 
-def isPalindrome(N): 
-    newNum = 0
-    while(N > 0): 
-        newNum += N % 10
-        N = N // 10
-    revNewNum = 0
-    N = newNum
-    while(N > 0):
-        revNewNum = revNewNum * 10 + N % 10
-        N = N // 10
-    return 1 if(revNewNum == newNum) else 0
-N = int(input("Enter A Number : "))
-print(isPalindrome(N))
+# def isPalindrome(N): 
+#     newNum = 0
+#     while(N > 0): 
+#         newNum += N % 10
+#         N = N // 10
+#     revNewNum = 0
+#     N = newNum
+#     while(N > 0):
+#         revNewNum = revNewNum * 10 + N % 10
+#         N = N // 10
+#     return 1 if(revNewNum == newNum) else 0
+# N = int(input("Enter A Number : "))
+# print(isPalindrome(N))
 
 
 
@@ -42,6 +42,16 @@ print(isPalindrome(N))
 ############
 
 num = int(input("Enter A Number : "))
-lst = [int(i) for i in range(num)]
-
-
+sum = 0
+lst = [int(i) for i in str(num)]
+print(lst)
+for i in lst:
+    sum += i
+# print(sum)
+str_sum = str(sum)
+rev_str = int(str_sum[::-1])
+# print(rev_str)
+if sum == rev_str:
+    print("Palindrome")
+else:
+    print("Not A Palindrome")
