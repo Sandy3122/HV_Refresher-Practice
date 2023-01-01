@@ -1,0 +1,158 @@
+SQL Class Day_2 - 2
+
+
+
+/* Hopital DataBase */
+
+/* Creating Database */
+CREATE DATABASE hospital;
+
+/* Creating Table In The hospital Database */
+CREATE TABLE hospital.employee(
+	id int primary key not null unique,
+    name varchar(50),
+    position varchar(50),
+    registered bool,
+    ssn int not null unique   
+);
+
+/* To See The Table Structure */
+SELECT * FROM hospital.employee;
+
+/* Inserting Values In The Table */
+INSERT INTO hospital.employee
+VALUE(101, "Sandeep", "Cheif Doctor", True, 1001), 
+(102, "Taruni", "Dermatologists", True, 1002), 
+(103, "Jignesh", "MBA", False, 1003), 
+(104, "Geethika", "General Surgen", True, 1004),
+(105, "Usha", "Surgeon", False, 1005);
+
+/* Updating the table */ 
+UPDATE employee set position="General Surgeon" WHERE id=105;
+
+/* Deleting The Entire Table */
+DROP TABLE hospital.employee;
+
+
+/*
+Basic Queries 
+*/
+
+/* Showing unregistered employee's */
+SELECT * FROM employee WHERE registered=False;
+
+/* Insering Another Entry */
+INSERT INTO hospital.employee
+VALUE(106, "Usha", "Oncologist", True, 1006);
+
+/* Showing General Surgeon's From employee's  Table*/
+SELECT * FROM employee WHERE position="General Surgeon";
+
+/*
+This Command Shows Changes Only in Output
+Changed the colummn name with "as"
+*/
+SELECT name as "Name", position as "Position", registered as "Registered", ssn as "Ssn" FROM employee WHERE registered=True;
+
+
+/*
+CREATING New(physician) Table
+*/
+CREATE TABLE physician(
+	physicianId int primary key not null unique,
+    name varchar(50),
+    position varchar(50),
+    ssn int not null unique   
+);
+
+INSERT INTO physician
+VALUE(1, "Sandeep", "Head Staff", 1001),
+(2, "Taruni", "Head Staff", 1002), 
+(3, "Hyndu", "Staff", 1003), 
+(4, "Geethika", "Head Staff", 1004),
+(5, "Usha", "Staff", 1005);
+
+/* Insering Another Entry */
+INSERT INTO physician
+VALUE(6, "Hyndu", "Head Staff", 1006);
+
+/* To See The Table Structure */
+SELECT * FROM physician;
+
+DROP TABLE physician;
+
+/*
+Creating New(Department) Table
+*/
+Create Table department(
+	departmentId INT PRIMARY KEY NOT NULL,
+    name varchar(50) NOT NULL,
+    head INT NOT NULL
+);
+
+INSERT INTO department 
+VALUES(1, "Dermatologists", 2),
+(2, "General Surgen", 4),
+(3, "Dermatologists", 8),
+(4, "OPD", 10); 
+
+
+/* Showing The Comman Values By Comparing the department head and physician physicianId */
+SELECT d.name as "Department" , p.name as "Physican" from department d, physician p where d.head = p.physicianId;
+
+/* Deleting The Entire Table */
+DROP TABLE department;
+
+
+/*
+Creating New(Appointment) Table
+*/
+
+CREATE TABLE appointment(
+	appointmentId INT PRIMARY KEY NOT NULL,
+    patient INT NOT NULL,
+    nurse INT NOT NULL,
+    physician INT NOT NULL,
+    room VARCHAR(50) NOT NULL
+);
+
+INSERT INTO appointment VALUES
+(101, 11, 21, 1, "A"),
+(102, 12, 22, 2, "B"),
+(103, 11, 23, 3, "C"),
+(104, 14, 24, 4, "D"),
+(105, 15, 25, 5, "E"),
+(106, 12, 26, 6, "E");
+
+SELECT * FROM appointment;
+
+/* Showing duplicate values of patient's in apponintment */
+SELECT COUNT(distinct patient) as "details" FROM appointment;
+
+
+/*
+Creating New(Room) Table
+*/
+
+CREATE TABLE room(
+	roomno INT PRIMARY KEY NOT NULL,
+    roomtype VARCHAR(50) NOT NULL,
+    floor INT NOT NULL,
+    available VARCHAR(50) NOT NULL
+);
+
+INSERT INTO room VALUES
+(101, "Single", 1, "True"),
+(102, "Double", 4, "False"),
+(103, "Single", 3, "True"),
+(104, "Single", 2, "False"),
+(105, "Double", 1, "True"),
+(106, "Single", 2, "False");
+
+SELECT * FROM room;
+
+SELECT count(*) as "Current Details" FROM room WHERE available="True";
+
+
+/* Deleting The Entire Table */
+DROP TABLE room;

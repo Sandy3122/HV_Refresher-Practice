@@ -1,0 +1,144 @@
+// technical terms
+
+// Relational Database : tables, columns
+// mysql
+
+
+
+//sql => language which helps connect with database and manipulate;
+
+
+//Nosql => example : MongoDB database;
+// key : value pair => collection and documents
+
+
+// SQL And Relatinal DataBase
+
+//Creating A Table;
+
+// DDl => Data definition language		=> (create and alter)
+// DML => Data Manipulating language	=> (insert and update)
+// DQL => Data Query language			=> (select)
+
+
+// Schema : Structure Of Database; Flowprint of the database
+
+// ACID property of Database
+
+// A => Atomicity
+// c => Consistency
+// I => Isolation
+// D => Durability
+
+
+// Atomicity : A transanction in a database can either be completed or it has not been completed, It can never be partial;
+
+// Consistency : 
+
+// Isolation : It ensures that transaction, is in a serilized format;
+
+// Durability : When certain transaction is complete, the change is permenent in the DB due to this transaction.
+
+
+
+// Different Types Of DataBase :
+
+1. Relational DataBase
+2. Heirarichal DataBase
+3. Network DataBase
+
+
+
+// Relational DataBase :
+
+	Table 		: Relation;
+	Row			: Tuples;
+	Columns		: Attributes;
+	Total No.Of Rows	: Cardinality
+	Total no.of Colums: Degree
+
+
+// SQL Operations
+
+// Creating the table;
+
+create table table_name(
+	column_name1 datatype(size)	constraint
+	column_name2 datatype(size)	constraint
+)
+
+// Datatype Sizes 
+// int 	=> 4 bites
+// varchar	=> max 200
+
+
+// Constraints
+
+//	not null
+//	unique
+//	default
+//	check
+//	not null unique : primary key;
+//	auto-increment
+
+
+Example : Create table test_table(
+	id int not null unique,
+	name varchar(50),
+      email varchar(100)
+)
+
+
+// Insert
+	insert into table_name(column1, column2) values(value1, value2)
+	insert into table_name values(1,"herovired", heorvired@gmail.com)
+
+
+// Retrive the elements in table (SELECT)
+
+1. To see all elements or data
+	
+	select * from table_name
+
+2. to see specific column
+	
+	select id, name from table_name
+
+
+//Clauses : where, order by, group by, having, distinct;
+	
+	select id, name from table_name where id=1,
+	// select id,name from table_name order by id (by default it gives in ascending order) desc;
+
+select name,email from sample_table order by name asc, email desc
+// output will be : only on the basis of the first order by parameter
+NOTE : if the first parameter of orderby is repeated in column then only the seocnd parameter works  for that element in the column;
+
+
+
+// Update the values in table
+	
+	update table_name set column_name = "value" where id = some_condition;
+//example
+	update table_name set name = "username" where id = 1;
+
+
+// order by (asc / desc ) 
+	select id, name from test_table order by id desc;
+
+	select id, name from test_table order by name desc;
+
+	select email from test_table order by email desc;
+
+
+// Delete Data in the table
+	
+	delete from test_table where id= 1;
+
+// to delete the all data in the table and not the table 
+	
+	truncate table test_table;
+
+// to delete whole table  
+	
+	drop table rest_table;

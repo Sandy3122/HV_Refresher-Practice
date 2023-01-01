@@ -1,0 +1,132 @@
+SQL CLASS DAY_2 - 1
+
+
+-- CREATE TABLE sandeep.students(Student_id INT, Student_name VARCHAR(45), Student_marks VARCHAR(40));
+-- INSERT INTO sandeep.students(Student_id, Student_name, Student_marks)
+-- VALUES (001, 'Taruni', 100), (002, 'Seeram', 99), (001, 'Geethika', 99), (001, 'Sona', 100);
+
+-- DELETE FROM sandeep.students WHERE Student_id = 2;
+
+
+
+create table sandeep.test_table(
+		id int not null unique,
+		name varchar(50),
+        email varchar(100)
+);
+
+-- to see whole table 
+SELECT * FROM sandeep.test_table; 
+
+insert into test_table values(7,"Geethu", "geethu@gmail.com"), (8,"Hyndu", "hyndu@gmail.com");
+
+-- to see th id and name 
+select id , name from sandeep.test_table;
+
+-- to select particulat id using where clause
+select id, name from test_table where id=4;
+
+-- Update and set the values in the table
+update test_table set name = "Seeram" where id= 1;
+
+
+-- order by (asc / desc ) 
+select id, email from test_table order by id desc;
+
+select id, name from test_table order by name desc;
+
+select email from test_table order by email desc;
+
+
+-- Delete Data in the table
+delete from test_table where id= 1;
+
+-- to delete the all data in the table and not the table 
+truncate table test_table;
+
+-- to delete whole table  
+drop table rest_table;
+
+
+
+
+DROP table sandeep.test_table;
+
+-- use sandeep;
+
+/*
+Day - 2
+Creating New(marks) Table
+*/
+CREATE TABLE marks(
+	std_Id INT PRIMARY KEY NOT NULL,
+    std_Name VARCHAR(50) NOT NULL,
+    std_Marks INT NOT NULL
+);
+
+INSERT INTO marks 
+VALUES(101, "Sandeep", 100),
+(102, "Taruni", 100),
+(103, "Hyndu", 90),
+(104, "Geethika", 80),
+(105, "Usha", 70),
+(106, "Jignesh", 60);
+
+SELECT * FROM marks;
+
+/* Max Keyword (Showing Highest Marks)*/
+SELECT MAX(std_marks) from marks;
+
+/* MIN Keyword (Showing Lowest Marks) */
+SELECT MAX(std_marks) as "Lowest Marks" from marks;
+
+
+
+/* Showing Second Highest Marks */
+SELECT MAX(std_marks) FROM marks WHERE std_marks < (SELECT MAX(std_marks) FROM marks);
+
+DROP TABLE marks;
+
+/*
+Creating New(details) Table
+*/
+CREATE TABLE details(
+	std_Id INT PRIMARY KEY NOT NULL,
+    std_Name VARCHAR(80) NOT NULL,
+    address VARCHAR(80) NOT NULL,
+    grade VARCHAR(50) NOT NULL
+);
+
+
+
+INSERT INTO details VALUES(101, "Sandeep", "AP", "A"),
+(102, "Taruni", "AP", "A"),
+(103, "Hyndu","GOA", "B"),
+(104, "Geethika","KERALA", "B"),
+(105, "Usha", "GOA", "B"),
+(106, "Jignesh", "AP", "B");
+
+
+/* And Clause */
+SELECT * FROM details WHERE address="AP" AND grade="A";
+
+/* Or Clause */
+SELECT * FROM details WHERE address="Andhra Pradesh" OR grade="A";
+
+/* Alter Clause */
+ALTER TABLE details
+RENAME COLUMN std_Id to Student_Id;
+
+ALTER TABLE details
+MODIFY COLUMN Student_Id VARCHAR(50);
+
+ALTER TABLE details
+ADD email VARCHAR(50) NOT NULL;
+
+ALTER TABLE details 
+DROP COLUMN email;
+
+
+SELECT * FROM details;
+
+DROP TABLE details;
