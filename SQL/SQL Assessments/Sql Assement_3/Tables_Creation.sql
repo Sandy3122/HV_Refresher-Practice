@@ -1,8 +1,6 @@
 /* Assessment */
 
-/* CREATING Order_Details DATABASE */
-CREATE DATABASE Order_Details;
-
+/* CREATING consumer Table */
 CREATE TABLE consumer
 (
 	consumer_id INT PRIMARY KEY NOT NULL UNIQUE,
@@ -11,7 +9,7 @@ CREATE TABLE consumer
     sales_manager_id INT NOT NULL  
 );
 
-
+/* CREATING orders Table */
 CREATE TABLE orders
 (
 	order_no INT PRIMARY KEY NOT NULL UNIQUE,
@@ -21,6 +19,7 @@ CREATE TABLE orders
     sales_manager_id INT NOT NULL  
 );
 
+/* CREATING sales_manager Table */
 CREATE TABLE sales_manager
 (
     sales_manager_id INT PRIMARY KEY NOT NULL UNIQUE,
