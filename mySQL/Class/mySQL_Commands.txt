@@ -1,0 +1,14 @@
+1. To Show the databases in mysql command line
+    show databases;
+
+2. To select tables 
+    use database_name
+
+3. To see the tables
+    show tables;
+
+4. To See Table Colums Datatypes
+    describe table_name
+
+5. To Fetch The Data
+    SELECT * FROM table_name
