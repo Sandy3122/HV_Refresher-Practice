@@ -16,4 +16,4 @@ class Emp(Person):                      #Inherited Class Or Child Class Means it
 
 empDetails = Emp("Seeram Sandeep",1999)
 empDetails.display()                    #Function Calling From Parent Class
-empDetails.Print()                      #Function Calling From Child Class
+empDetails.print()                      #Function Calling From Child Class
