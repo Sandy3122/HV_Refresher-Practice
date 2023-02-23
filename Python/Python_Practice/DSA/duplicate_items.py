@@ -1,4 +1,6 @@
 #removeing duplicate elements in a list
+
+
 a= []
 n = int(input("Enter the number of elemnts: "))
 for x in range(0, n):
@@ -11,5 +13,4 @@ for x in a:
     if x not in b:
         unique.append(x)
         b.add(x)
-print("Non duplicate elements: ", unique)
-    
+print("Non duplicate elements: ", unique) 
